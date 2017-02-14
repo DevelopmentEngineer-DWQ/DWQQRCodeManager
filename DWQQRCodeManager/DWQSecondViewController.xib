@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DWQSecondViewController">
+            <connections>
+                <outlet property="inputField" destination="lSS-14-icD" id="zoz-ls-wJd"/>
+                <outlet property="resultImageView" destination="tK5-D4-0XN" id="7Rg-4l-qNS"/>
+                <outlet property="resultLabel" destination="8bx-RX-Eso" id="AE5-rJ-Wd4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duwenquanLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="tK5-D4-0XN">
+                    <rect key="frame" x="72" y="108" width="240" height="128"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入要生成的字符串" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSS-14-icD">
+                    <rect key="frame" x="16" y="254" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS高级开发攻城狮-杜文全" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrN-60-pfI">
+                    <rect key="frame" x="26" y="73" width="333" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫描结果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-70-bpW">
+                    <rect key="frame" x="26" y="294" width="140" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bx-RX-Eso">
+                    <rect key="frame" x="16" y="323" width="359" height="63"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXu-ed-N5j">
+                    <rect key="frame" x="128" y="407" width="119" height="30"/>
+                    <state key="normal" title="扫描"/>
+                    <connections>
+                        <action selector="scan:" destination="-1" eventType="touchUpInside" id="J0Y-qT-Chq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XbB-70-bpW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="1V2-eL-q7H"/>
+                <constraint firstItem="WrN-60-pfI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="3jb-PT-sHd"/>
+                <constraint firstItem="lSS-14-icD" firstAttribute="top" secondItem="tK5-D4-0XN" secondAttribute="bottom" constant="18" id="52L-7R-bOA"/>
+                <constraint firstAttribute="bottom" secondItem="tK5-D4-0XN" secondAttribute="bottom" constant="431" id="9wA-1i-CLw"/>
+                <constraint firstItem="tK5-D4-0XN" firstAttribute="top" secondItem="WrN-60-pfI" secondAttribute="bottom" constant="14" id="B07-t6-bDL"/>
+                <constraint firstItem="lSS-14-icD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="DUS-M4-rZN"/>
+                <constraint firstItem="WrN-60-pfI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="73" id="Die-hf-AY4"/>
+                <constraint firstAttribute="trailing" secondItem="tK5-D4-0XN" secondAttribute="trailing" constant="63" id="E1f-BM-csq"/>
+                <constraint firstAttribute="bottom" secondItem="WXu-ed-N5j" secondAttribute="bottom" constant="230" id="Gbl-tr-glN"/>
+                <constraint firstItem="8bx-RX-Eso" firstAttribute="top" secondItem="XbB-70-bpW" secondAttribute="bottom" constant="8" id="M18-n1-q1b"/>
+                <constraint firstItem="tK5-D4-0XN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="108" id="Mn3-hi-A1a"/>
+                <constraint firstItem="8bx-RX-Eso" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Pf2-yv-4z8"/>
+                <constraint firstAttribute="trailing" secondItem="WrN-60-pfI" secondAttribute="trailing" constant="16" id="Qk7-ny-xLd"/>
+                <constraint firstAttribute="trailing" secondItem="lSS-14-icD" secondAttribute="trailing" constant="16" id="TMF-sS-IQ7"/>
+                <constraint firstAttribute="bottom" secondItem="lSS-14-icD" secondAttribute="bottom" constant="383" id="WU8-Fh-A28"/>
+                <constraint firstItem="WXu-ed-N5j" firstAttribute="top" secondItem="8bx-RX-Eso" secondAttribute="bottom" constant="21" id="WYc-fo-15b"/>
+                <constraint firstAttribute="trailing" secondItem="WXu-ed-N5j" secondAttribute="trailing" constant="128" id="ahm-DZ-7Le"/>
+                <constraint firstAttribute="trailing" secondItem="XbB-70-bpW" secondAttribute="trailing" constant="209" id="dPv-AH-GNa"/>
+                <constraint firstItem="WXu-ed-N5j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="128" id="eS6-vs-hbs"/>
+                <constraint firstItem="tK5-D4-0XN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="72" id="jF4-zy-bSy"/>
+                <constraint firstItem="XbB-70-bpW" firstAttribute="top" secondItem="lSS-14-icD" secondAttribute="bottom" constant="10" id="me4-sn-ij0"/>
+                <constraint firstAttribute="trailing" secondItem="8bx-RX-Eso" secondAttribute="trailing" id="wpt-81-2Ya"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="180.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="duwenquanLogo.png" width="149" height="153"/>
+    </resources>
+</document>
