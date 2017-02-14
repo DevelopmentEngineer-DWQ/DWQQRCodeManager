@@ -1,7 +1,7 @@
 # DWQQRCodeManager
 一款超级强大的二维码的扫描封装
 
-
+![(logo)](http://chuantu.biz/t5/47/1487062141x1904247604.png)
 
 
 ##使用方法
