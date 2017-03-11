@@ -38,12 +38,15 @@
 
 }
 - (IBAction)scan:(id)sender {
-    
+    //初始化扫描控制器
     DWQQRScanViewController *controller = [[DWQQRScanViewController alloc] init];
+    
     [controller setResultHandler:^(DWQQRScanViewController *controller, NSString *result) {
         self.resultLabel.text = result;
         [controller dismissViewControllerAnimated:YES completion:nil];
     }];
+    
+   
     [self presentViewController:controller animated:YES completion:nil];
 
 }

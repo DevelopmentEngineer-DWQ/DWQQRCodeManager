@@ -148,7 +148,7 @@
 }
 
 #pragma mark - 解码二维码图片
-// https://www.shinobicontrols.com/blog/ios8-day-by-day-day-13-coreimage-detectors
+
 - (CIImage *)prepareRectangleDetector:(CIImage *)ciImage {
     NSDictionary *options = @{CIDetectorAccuracy : CIDetectorAccuracyHigh};
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:options];

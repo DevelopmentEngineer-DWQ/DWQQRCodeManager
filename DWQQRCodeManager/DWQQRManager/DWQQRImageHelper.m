@@ -15,7 +15,7 @@
 @implementation DWQQRImageHelper
 static DWQQRImageHelper *_imageHelper = nil;
 
-// 根据字符串生成二维码 http://www.jb51.net/article/71373.htm
+// 根据字符串生成二维码
 // 1. 导入CoreImage框架
 // 2. 创建过滤器并设置属性
 // 3. 设置内容
@@ -88,7 +88,7 @@ static DWQQRImageHelper *_imageHelper = nil;
 }
 
 /**
- *  解码图片 https://www.shinobicontrols.com/blog/ios8-day-by-day-day-13-coreimage-detectors
+ *  解码图片
  *
  *  @param ciImage 图片
  *  @return 根据image返回的相应二维码字符串内容
@@ -111,8 +111,7 @@ static DWQQRImageHelper *_imageHelper = nil;
     [picker dismissViewControllerAnimated:NO completion:^{
         UIImage *editedImage = [info objectForKey:UIImagePickerControllerEditedImage];
         CIImage *ciImage = [[CIImage alloc] initWithCGImage:editedImage.CGImage options:nil];
-        NSString *str = [DWQQRImageHelper decodeImage:ciImage]; // editedImage.CIImage 只有在UIImage是由CIImage提供时（比如它是由imageWithCIImage:生成的）， UIImage 的 CIImage才不会是空值 http://ask.csdn.net/questions/1876
-        if (self.completionHandler) {
+        NSString *str = [DWQQRImageHelper decodeImage:ciImage]; // editedImage.CIImage 只有在UIImage是由CIImage提供时（比如它是由imageWithCIImage:生成的）， UIImage 的 CIImage才不会是空值         if (self.completionHandler) {
             self.completionHandler(ciImage, str);
         }
         _imageHelper = nil;
